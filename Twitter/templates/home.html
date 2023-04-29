@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {%block content %}
-<h1>Hello Ronak</h1>
+<h1>Sentimental Analysis</h1>
 <form action="Search" method="post">
     {% csrf_token %}
-    Enter Trend : <input type="text" name="Key"   ><br>
-    
-    Enter 2nd number : <input type="text" name="frame"   ><br>
+
+    Enter Trend : <input type="text" name="Key"><br>
+    <label for="frame">Choose Time frame:</label>
+    <select id="frame" name="frame">
+        <option value="day">1 day</option>
+        <option value="Week">1 Week</option>
+        <option value="Month">1 Month</option>
+    </select><br><br>
     <input type="submit">
 </form>
 {%endblock%}

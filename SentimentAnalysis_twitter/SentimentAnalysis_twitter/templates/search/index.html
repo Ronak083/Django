@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>ADF Innovative Project</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static '/css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+  <!-- Main form - Action area -->
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="mainHeading center blue-text">Twitter Sentiment Analysis</h1>
+      <div class="input-field col s6">
+         <form method="POST" action="/search/"> 
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="row center need-space" >
+              <input type='submit' value='Analyse' id="download-button" class="btn-large waves-effect waves-light blue tooltipped padbutton" data-position="bottom" data-delay="50" data-tooltip="Click here to analyse the hashtag">
+            </div>
+        </form>
+         
+        </div>
+      
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">search</i></h2>
+            <h5 class="center">Search</h5>
+
+            <p class="light center">Search for a keyword that you would like to Analyse</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">pie_chart</i></h2>
+            <h5 class="center">Analyse</h5>
+
+            <p class="light center">Tweets will be returned as positive, negative or neutral</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">file_download</i></h2>
+            <h5 class="center">Download</h5>
+            <p class="light center">Use the downloaded CSV File for your own analysis</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+  <footer class="page-footer blue">
+    <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">About Us</h5>
+                <p class="grey-text text-lighten-4">18BCE055 | Dhruv Pathak<br>18BCE019 | Avi Mehta<br>18BCE059 | Divyank Jain<br><br> Students at: <br>Department of Computer Science Engineering,<br>
+                  Institute of Technology, <br>
+                  Nirma University, Ahmedabad
+                   </p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Connect With Us</h5>
+                <div>
+                <ul>
+                  <li>
+                    <u>Mail:</u>
+                    <ul>
+                      <li><a class="grey-text text-lighten-3" href="mailto:18BCE055@nirmauni.ac.in" target="_blank">Dhruv Pathak</a></li>
+                      <li><a class="grey-text text-lighten-3" href="mailto:18BCE019@nirmauni.ac.in" target="_blank">Avi Mehta</a></li>
+                      <li><a class="grey-text text-lighten-3" href="mailto:18BCE059@nirmauni.ac.in" target="_blank">Divyank Jain</a></li>
+                    </ul><br>
+                  <li><u>Source Code:</u><br><a class="grey-text text-lighten-3" href="https://github.com/MagnusJackson" target="_blank">Github</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <p>Made in October 2021</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+
+  </body>
+</html>
