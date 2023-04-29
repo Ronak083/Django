@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{%block content %}
+<h1>Hello Ronak</h1>
+<form action="Search" method="post">
+    {% csrf_token %}
+    Enter Trend : <input type="text" name="Key"   ><br>
+    
+    Enter 2nd number : <input type="text" name="frame"   ><br>
+    <input type="submit">
+</form>
+{%endblock%}
