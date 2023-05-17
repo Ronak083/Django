@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from Search import views 
 
 urlpatterns = [
     
     path('',include('Search.urls') ),
     path('admin/', admin.site.urls),
+    path('search/', views.get_name, name='search-results'),
+    path('download/', views.download_csv, name='download'),
 
 ]

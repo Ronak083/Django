@@ -1,5 +1,5 @@
 """
-ASGI config for DynamicHotels project.
+ASGI config for CompanyX project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DynamicHotels.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "CompanyX.settings")
 
 application = get_asgi_application()

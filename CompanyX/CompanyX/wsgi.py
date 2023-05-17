@@ -1,5 +1,5 @@
 """
-WSGI config for DynamicHotels project.
+WSGI config for CompanyX project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'DynamicHotels.settings')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "CompanyX.settings")
 
 application = get_wsgi_application()

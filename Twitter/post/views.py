@@ -14,7 +14,7 @@ def index(request):
             auth.set_access_token(settings.ACCESS_TOKEN, settings.ACCESS_TOKEN_SECRET)
             global api
             api = tweepy.API(auth)
-
+            
             return redirect('post')
 
     return render(request, 'index.html')
